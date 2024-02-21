@@ -38,14 +38,14 @@ with open(election_csv,'r') as csvfile:
         
 
             
-    vote_count_charles = candidate_counter_dict[unique_candidate_list[0]]
-    vote_count_diana = candidate_counter_dict[unique_candidate_list[1]]
-    vote_count_raymon = candidate_counter_dict[unique_candidate_list[2]]
-    percent_vote_charles = round((vote_count_charles/num_voters)*100,2)
-    percent_vote_diana = round((vote_count_diana/num_voters)*100,2)
-    percent_voters_raymon = round((vote_count_raymon/num_voters)*100,2)
-    highest_vote_count = max(unique_candidate_list_votes)
-    index_of_winner = unique_candidate_list_votes.index(max(unique_candidate_list_votes))
+vote_count_charles = candidate_counter_dict[unique_candidate_list[0]]
+vote_count_diana = candidate_counter_dict[unique_candidate_list[1]]
+vote_count_raymon = candidate_counter_dict[unique_candidate_list[2]]
+percent_vote_charles = round((vote_count_charles/num_voters)*100,2)
+percent_vote_diana = round((vote_count_diana/num_voters)*100,2)
+percent_voters_raymon = round((vote_count_raymon/num_voters)*100,2)
+highest_vote_count = max(unique_candidate_list_votes)
+index_of_winner = unique_candidate_list_votes.index(max(unique_candidate_list_votes))
 
 
 
@@ -61,3 +61,17 @@ print(f'{unique_candidate_list[2]}: {percent_voters_raymon}% ({vote_count_raymon
 print('---------------------------------------')
 print(f'Winner: {unique_candidate_list[index_of_winner]}')
 print('---------------------------------------')
+
+# #write the results into a separate txt file 
+# output_path = os.path.join('..','analysis','Results_analysis')
+# with open(output_path,'w') as txtfile:
+#     txtfile.write('Election Results')
+#     txtfile.write('---------------------------------------')
+#     txtfile.write(f'total votes: {num_voters}')
+#     txtfile.write('---------------------------------------')
+#     txtfile.write(f'{unique_candidate_list[0]}: {percent_vote_charles}% ({vote_count_charles})')
+#     txtfile.write(f'{unique_candidate_list[1]}: {percent_vote_diana}% ({vote_count_diana})')
+#     txtfile.write(f'{unique_candidate_list[2]}: {percent_voters_raymon}% ({vote_count_raymon})')
+#     txtfile.write('---------------------------------------')
+#     txtfile.write(f'Winner: {unique_candidate_list[index_of_winner]}')
+#     txtfile.write('---------------------------------------')

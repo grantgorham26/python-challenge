@@ -32,8 +32,10 @@ with open(budget_csv,'r') as csvfile:
         
 
             
-#change in profit/loss is the specific month minus the previous month, ex: profit[1]-profit[0], or final profit minus the inital profit and then add that to a list and then take the average of that list
-#used xpert leaning assistant to help find this out. i asked it how to loop through a list of and find the change between the numbers
+#change in profit/loss is the specific month minus the previous month, ex: profit[1]-profit[0], 
+#or final profit minus the inital profit and then add that to a list and then take the average of that list
+#used xpert leaning assistant to help find this out. i asked it how to loop through a list of and find the 
+#change between the numbers
     for i in range(1,len(profit)):
         change = profit[i]- profit[i-1]
         #add the profit change through a month to a new list 
@@ -68,8 +70,8 @@ print(f'Greatest Decrease in Profits: {date[index_greatest_decrease+1]} (${great
 # #need a plus one to make it correct 
 # print(date[index_greatest_decrease])
 
-
-output_path= os.path.join('..','analysis','Budget_analysis.txt')
+#write the results into a separate txt files
+output_path = os.path.join('..','analysis','Budget_analysis.txt')
 with open(output_path,'w') as txtfile:
     txtfile.write('Financial Analysis')
     txtfile.write('---------------------------')
