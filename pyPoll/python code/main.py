@@ -38,9 +38,9 @@ with open(election_csv,'r') as csvfile:
         
 
             
-    vote_count_charles = candidate_counter_dict['Charles Casper Stockham']
-    vote_count_diana = candidate_counter_dict['Diana DeGette']
-    vote_count_raymon = candidate_counter_dict['Raymon Anthony Doane']
+    vote_count_charles = candidate_counter_dict[unique_candidate_list[0]]
+    vote_count_diana = candidate_counter_dict[unique_candidate_list[1]]
+    vote_count_raymon = candidate_counter_dict[unique_candidate_list[2]]
     percent_vote_charles = round((vote_count_charles/num_voters)*100,2)
     percent_vote_diana = round((vote_count_diana/num_voters)*100,2)
     percent_voters_raymon = round((vote_count_raymon/num_voters)*100,2)
