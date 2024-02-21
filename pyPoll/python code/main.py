@@ -43,11 +43,11 @@ with open(election_csv,'r') as csvfile:
     percent_vote_diana = round((vote_count_diana/num_voters)*100,2)
     percent_voters_raymon = round((vote_count_raymon/num_voters)*100,2)
     highest_vote_count = max(unique_candidate_list_votes)
-    highest_vote_candidate_index = unique_candidate_list.index(max(highest_vote_count))
+    index_of_winner = unique_candidate_list_votes.index(max(unique_candidate_list_votes))
 
 
 
-print(highest_vote_count)
+
 
 print('Election Results')
 print('---------------------------------------')
@@ -57,5 +57,5 @@ print(f'{unique_candidate_list[0]}: {percent_vote_charles}% ({vote_count_charles
 print(f'{unique_candidate_list[1]}: {percent_vote_diana}% ({vote_count_diana})')
 print(f'{unique_candidate_list[2]}: {percent_voters_raymon}% ({vote_count_raymon})')
 print('---------------------------------------')
-print(f'Winner: {unique_candidate_list[highest_vote_candidate_index]}')
+print(f'Winner: {unique_candidate_list[index_of_winner]}')
 print('---------------------------------------')
