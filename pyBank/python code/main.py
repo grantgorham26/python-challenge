@@ -30,17 +30,21 @@ with open(budget_csv,'r') as csvfile:
         #https://www.geeksforgeeks.org/sum-function-python/ this is where i got code
         total_profits= sum(profit)
         
+
         
+        
+
+    
 #change in profit/loss is the specific month minus the previous month, ex: profit[1]-profit[0], or final profit minus the inital profit and then add that to a list and then take the average of that list
 #used xpert leaning assistan to help find this out. i asked it how to loop through a list of and find the change between the numbers
-for i in range(1,len(profit)):
-    change = profit[i]- profit[i-1]
-    profit_change.append(change)
-    avgprofitchange = (sum(profit_change))/(len(profit_change))
-    greatest_increase_profit = max(profit_change)
-    index_greatest_increase= profit_change.index(max(profit_change))
-    greatest_decrease_profit = min(profit_change)
-    index_greatest_decrease= profit_change.index(min(profit_change))
+    for i in range(1,len(profit)):
+        change = profit[i]- profit[i-1]
+        profit_change.append(change)
+        avgprofitchange = (sum(profit_change))/(len(profit_change))
+        greatest_increase_profit = max(profit_change)
+        index_greatest_increase= profit_change.index(max(profit_change))
+        greatest_decrease_profit = min(profit_change)
+        index_greatest_decrease= profit_change.index(min(profit_change))
 
 
 
@@ -50,18 +54,21 @@ for i in range(1,len(profit)):
 
 
         
-
+print('Financial Analysis')
+print('---------------------------')
 #this gives the total number of months in the list
-print(num_months)
+print(f'Total Months: {num_months}')
 #this sums the losses and profits of the list 
-print(total_profits)
+print(f'Total: ${total_profits}')
 
-print(avgprofitchange)
+print(f'Average Change: ${round(avgprofitchange,2)}')
 
-print(greatest_increase_profit)
+print(f'Greatest Increase in Profits: {date[index_greatest_increase+1]} (${greatest_increase_profit})')
+# print(greatest_increase_profit)
+# #need a plus one to mkae it correct
+# print(date[index_greatest_increase])
 
-print(greatest_decrease_profit)
-
-print(date[index_greatest_decrease+1])
-
-print(date[index_greatest_increase+1])
+print(f'Greatest Decrease in Profits: {date[index_greatest_decrease+1]} (${greatest_decrease_profit})')
+# print(greatest_decrease_profit)
+# #need a plus one to make it correct 
+# print(date[index_greatest_decrease])
