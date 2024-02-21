@@ -24,11 +24,13 @@ with open(election_csv,'r') as csvfile:
         candidate.append(row[2])
         #create a variable for candidate name
         candidate_name = row[2]
-        #create two list with unique candiates and there votes 
+        #convert the dictionary into two list with unique candiates and there amount of votes
+        #i used https://www.tutorialspoint.com/How-to-convert-Python-Dictionary-to-a-list 
+        #to help convert the open dictinary to two seperate list based on whether they were keys or values 
         unique_candidate_list = list(candidate_counter_dict.keys())
         unique_candidate_list_votes = list(candidate_counter_dict.values())
 
-        #
+        #used kevins extra examples to create a counter that puts each name into a dictionary
         if candidate_name in candidate_counter_dict:
             candidate_counter_dict[candidate_name] = candidate_counter_dict[candidate_name] + 1
         else:
