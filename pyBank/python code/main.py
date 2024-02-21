@@ -31,27 +31,22 @@ with open(budget_csv,'r') as csvfile:
         total_profits= sum(profit)
         
 
-        
-        
-
-    
+            
 #change in profit/loss is the specific month minus the previous month, ex: profit[1]-profit[0], or final profit minus the inital profit and then add that to a list and then take the average of that list
 #used xpert leaning assistant to help find this out. i asked it how to loop through a list of and find the change between the numbers
     for i in range(1,len(profit)):
         change = profit[i]- profit[i-1]
+        #add the profit change through a month to a new list 
         profit_change.append(change)
         avgprofitchange = (sum(profit_change))/(len(profit_change))
+        #use the max function to find the greatest increase
         greatest_increase_profit = max(profit_change)
+        #use the index function to find the index in the list where greatest increase is to match it up with the date
         index_greatest_increase= profit_change.index(max(profit_change))
+        #use the max function to find the greatest decrease
         greatest_decrease_profit = min(profit_change)
+        #use the index function to find the index in the list where greatest decrease is to match it up with the date
         index_greatest_decrease= profit_change.index(min(profit_change))
-
-
-
-
-        
-
-
 
         
 print('Financial Analysis')
@@ -65,13 +60,15 @@ print(f'Average Change: ${round(avgprofitchange,2)}')
 
 print(f'Greatest Increase in Profits: {date[index_greatest_increase+1]} (${greatest_increase_profit})')
 # print(greatest_increase_profit)
-# #need a plus one to mkae it correct
+# #need a plus one to make it correct
 # print(date[index_greatest_increase])
 
 print(f'Greatest Decrease in Profits: {date[index_greatest_decrease+1]} (${greatest_decrease_profit})')
 # print(greatest_decrease_profit)
 # #need a plus one to make it correct 
 # print(date[index_greatest_decrease])
+
+
 output_path= os.path.join('..','analysis','Budget_analysis.txt')
 with open(output_path,'w') as txtfile:
     txtfile.write('Financial Analysis')
