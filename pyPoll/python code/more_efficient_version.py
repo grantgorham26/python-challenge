@@ -36,7 +36,7 @@ with open(election_csv,'r') as csvfile:
             candidate_counter_dict[candidate_name] = candidate_counter_dict[candidate_name] + 1
         else:
             candidate_counter_dict[candidate_name] = 1
-        
+#need to comment more on the code        
 for i in range(len(unique_candidate_list)):
     percent_of_votes = round((unique_candidate_list_votes[i]/num_voters)*100,3)
     print(f'{unique_candidate_list[i]}: {percent_of_votes}% ({unique_candidate_list_votes[i]})')
