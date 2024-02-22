@@ -65,7 +65,7 @@ with open(output_path,'w') as txtfile:
     txtfile.write('---------------------------------------')        
     for i in range(len(unique_candidate_list)):
         percent_of_votes = round((unique_candidate_list_votes[i]/num_voters)*100,3)
-    txtfile.write(f'{unique_candidate_list[i]}: {percent_of_votes}% ({unique_candidate_list_votes[i]})')
+        txtfile.write(f'{unique_candidate_list[i]}: {percent_of_votes}% ({unique_candidate_list_votes[i]})')
     txtfile.write('---------------------------------------')
     txtfile.write(f'Winner: {winning_candidate}')
     txtfile.write('---------------------------------------')
