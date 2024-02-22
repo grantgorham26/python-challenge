@@ -5,7 +5,7 @@ import csv
 date = []
 profit = []
 profit_change = []
-
+date_change = []
 #path to collect data from specified folder
 budget_csv= os.path.join('..','resources','budget_data.csv')
 # open the csv file and read it 
@@ -32,9 +32,15 @@ with open(budget_csv,'r') as csvfile:
 #used xpert leaning assistant to help find this out. i asked it how to loop through a list of and find the 
 #change between the numbers
     for i in range(1,len(profit)):
-        change = profit[i]- profit[i-1]
+        #grabs the value of change by taking a month-year and the previous month-year and finding the difference bewteeen the values  
+        change = profit[i] - profit[i-1]
+        #loops through the dates to get each month-yr 
+        changeindate = date[i]
+        #adds the months where there is change to the the list
+        date_change.append(changeindate)
         #add the profit change through a month to a new list 
         profit_change.append(change)
+        #obtains the average change in profit from month to month 
         avgprofitchange = (sum(profit_change))/(len(profit_change))
         #use the max function to find the greatest increase
         greatest_increase_profit = max(profit_change)
@@ -48,15 +54,11 @@ with open(budget_csv,'r') as csvfile:
 #print out results to terminal        
 print('Financial Analysis')
 print('---------------------------')
-#this gives the total number of months in the list
 print(f'Total Months: {num_months}')
-#this sums the losses and profits of the list 
 print(f'Total: ${total_profits}')
 print(f'Average Change: ${round(avgprofitchange,2)}')
-#need a plus one to make it correct 
-print(f'Greatest Increase in Profits: {date[index_greatest_increase+1]} (${greatest_increase_profit})')
-#need a plus one to make it correct 
-print(f'Greatest Decrease in Profits: {date[index_greatest_decrease+1]} (${greatest_decrease_profit})')
+print(f'Greatest Increase in Profits: {date_change[index_greatest_increase]} (${greatest_increase_profit})') 
+print(f'Greatest Decrease in Profits: {date_change[index_greatest_decrease]} (${greatest_decrease_profit})')
 
 
 
@@ -70,6 +72,6 @@ with open(output_path,'w') as txtfile:
     txtfile.write(f'Total Months: {num_months}')
     txtfile.write(f'Total: ${total_profits}')
     txtfile.write(f'Average Change: ${round(avgprofitchange,2)}')
-    txtfile.write(f'Greatest Increase in Profits: {date[index_greatest_increase+1]} (${greatest_increase_profit})')
-    txtfile.write(f'Greatest Decrease in Profits: {date[index_greatest_decrease+1]} (${greatest_decrease_profit})')
+    txtfile.write(f'Greatest Increase in Profits: {date_change[index_greatest_increase]} (${greatest_increase_profit})')
+    txtfile.write(f'Greatest Decrease in Profits: {date_change[index_greatest_decrease]} (${greatest_decrease_profit})')
     
