@@ -43,9 +43,9 @@ vote_count_charles = candidate_counter_dict[unique_candidate_list[0]]
 vote_count_diana = candidate_counter_dict[unique_candidate_list[1]]
 vote_count_raymon = candidate_counter_dict[unique_candidate_list[2]]
 #obtain the percentage of votes for each candidate
-percent_vote_charles = round((vote_count_charles/num_voters)*100,2)
-percent_vote_diana = round((vote_count_diana/num_voters)*100,2)
-percent_voters_raymon = round((vote_count_raymon/num_voters)*100,2)
+percent_vote_charles = round((vote_count_charles/num_voters)*100,3)
+percent_vote_diana = round((vote_count_diana/num_voters)*100,3)
+percent_voters_raymon = round((vote_count_raymon/num_voters)*100,3)
 #obtain the max amount of votes from list of amount of votes from the counter dictionary 
 highest_vote_count = max(unique_candidate_list_votes)
 #obtain index of the candidate with highest votes
