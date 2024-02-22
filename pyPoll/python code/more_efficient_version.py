@@ -75,7 +75,7 @@ print('---------------------------------------')
 
 #write the results into a separate txt file 
 #used day 2 activity 10 and activtiy 12 to help write the code to write the files into a new txt file
-output_path = os.path.join('..','analysis','Results_analysis2')
+output_path = os.path.join('..','analysis','Results_analysis2.txt')
 with open(output_path,'w') as txtfile:
     txtfile.write('Election Results')
     txtfile.write('---------------------------------------')
