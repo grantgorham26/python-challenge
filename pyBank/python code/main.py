@@ -33,13 +33,13 @@ with open(budget_csv,'r') as csvfile:
 #change between the numbers
     for i in range(1,len(profit)):
         #grabs the value of change by taking a month-year and the previous month-year and finding the difference bewteeen the values  
-        change = profit[i] - profit[i-1]
+        changeinprofit = profit[i] - profit[i-1]
         #loops through the dates to get each month-yr 
         changeindate = date[i]
         #adds the months where there is change to the the list
         date_change.append(changeindate)
         #add the profit change through a month to a new list 
-        profit_change.append(change)
+        profit_change.append(changeinprofit)
         #obtains the average change in profit from month to month 
         avgprofitchange = (sum(profit_change))/(len(profit_change))
         #use the max function to find the greatest increase
