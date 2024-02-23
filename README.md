@@ -2,7 +2,7 @@
  
 Pybank:
 
-In the pybank challenge the goal of this project was to write a python script that would analyze financial records. The financial records include the profit/losses for specific months of a year. 
+In the pybank challenge the goal of this project was to write a python script that would analyze financial records. The financial records include the profit/losses for specific months of a year. The scrip that was created obtained the total amount of months of financial records, the net profit/losses, the average change in profit/losses fro each month, the month with the  greatest increase in profits and the month with the greatest loss in profit.
 
 
 
