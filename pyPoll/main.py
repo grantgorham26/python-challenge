@@ -49,7 +49,8 @@ print('Election Results')
 print('---------------------------------------')
 print(f'total votes: {num_voters}')
 print('---------------------------------------')
-#use a loop to print out each candidates results so dont have to do it 2 extra times         
+#use a loop to print out each results for each candidate so i don't have to do it 2 extra times
+#creating this loop also makes it easier to change the results if another candidate was added to the data.         
 for i in range(len(unique_candidate_list)):
     percent_of_votes = round((unique_candidate_list_votes[i]/num_voters)*100,3)
     print(f'{unique_candidate_list[i]}: {percent_of_votes}% ({unique_candidate_list_votes[i]})')
