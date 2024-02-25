@@ -7,7 +7,7 @@ profit = []
 profit_change = []
 date_change = []
 #path to collect data from specified folder
-budget_csv= os.path.join('..','resources','budget_data.csv')
+budget_csv= os.path.join('resources','budget_data.csv')
 # open the csv file and read it 
 with open(budget_csv,'r') as csvfile:
     csvreader = csv.reader(csvfile,delimiter=',')
@@ -65,7 +65,7 @@ print(f'Greatest Decrease in Profits: {date_change[index_greatest_decrease]} (${
 
 #write the results into a separate txt files
 #used day 2 activity 10 and activtiy 12 to help write the code to write the files into a new txt file
-output_path = os.path.join('..','analysis','Budget_analysis.txt')
+output_path = os.path.join('analysis','Budget_analysis.txt')
 with open(output_path,'w') as txtfile:
     txtfile.write('Financial Analysis')
     txtfile.write('---------------------------')
