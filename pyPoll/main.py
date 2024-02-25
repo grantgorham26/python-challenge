@@ -27,7 +27,8 @@ with open(election_csv,'r') as csvfile:
         candidate_name = row[2]
         #convert the dictionary into two list with unique candiates and there amount of votes
         #i used https://www.tutorialspoint.com/How-to-convert-Python-Dictionary-to-a-list 
-        #to help convert the open dictinary to two seperate list based on whether they were keys or values 
+        #to help convert the open dictinary to two seperate list based on whether they were keys or values
+        #having these values and strings in separate list will be useful for finding the winner and percentage of votes in favor of a candidate 
         unique_candidate_list = list(candidate_counter_dict.keys())
         unique_candidate_list_votes = list(candidate_counter_dict.values())
 
@@ -43,11 +44,12 @@ index_of_winner = unique_candidate_list_votes.index(max(unique_candidate_list_vo
 #obtain name of winner from list
 winning_candidate = unique_candidate_list[index_of_winner]
 
-#need to comment more on the code
+#print out results to terminal
 print('Election Results')
 print('---------------------------------------')
 print(f'total votes: {num_voters}')
-print('---------------------------------------')        
+print('---------------------------------------')
+#use a loop to print out each candidates results so dont have to do it 2 extra times         
 for i in range(len(unique_candidate_list)):
     percent_of_votes = round((unique_candidate_list_votes[i]/num_voters)*100,3)
     print(f'{unique_candidate_list[i]}: {percent_of_votes}% ({unique_candidate_list_votes[i]})')
