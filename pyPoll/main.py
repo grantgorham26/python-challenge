@@ -28,7 +28,8 @@ with open(election_csv,'r') as csvfile:
         #convert the dictionary into two list with unique candiates and there amount of votes
         #i used https://www.tutorialspoint.com/How-to-convert-Python-Dictionary-to-a-list 
         #to help convert the open dictinary to two seperate list based on whether they were keys or values
-        #having these values and strings in separate list will be useful for finding the winner and percentage of votes in favor of a candidate 
+        #having these values and strings in separate list will be useful for finding the winner and percentage of votes in favor of a candidate
+        #By doing this it makes it very simple to update the data if another candidate is added or when another election is completed 
         unique_candidate_list = list(candidate_counter_dict.keys())
         unique_candidate_list_votes = list(candidate_counter_dict.values())
 
