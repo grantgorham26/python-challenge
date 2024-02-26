@@ -8,4 +8,4 @@ In the pybank challenge the goal of this project was to write a python script th
 
 Pypoll:
 
-In the pypoll challenge the goal of the project was to help a small rural town count its votes for a political race but in a more modernized way. To achieve that i wrote them a python script that would loop through the data to count the voters so they wouldnt have to count them all by hand the old fashioned way. 
+In the pypoll challenge the goal of the project was to help a small rural town count its votes for a political race but in a more modernized way. To achieve that i wrote them a python script that would loop through the data to count the voters so they wouldnt have to count them all by hand the old fashioned way. The script that I created is able to count the total number of votes cast, how many votes each specific candidate has and the percetage of their votes and determine the winner of the election.
