@@ -65,13 +65,15 @@ print(f'Greatest Decrease in Profits: {date_change[index_greatest_decrease]} (${
 
 #write the results into a separate txt files
 #used day 2 activity 10 and activtiy 12 to help write the code to write the files into a new txt file
+#to get it to write new lines I used \n which i found by looking it up on google and looking at a stackoverflow forum
+#https://stackoverflow.com/questions/11497376/how-do-i-specify-new-lines-in-a-string-in-order-to-write-multiple-lines-to-a-fil
 output_path = os.path.join('analysis','Budget_analysis.txt')
 with open(output_path,'w') as txtfile:
-    txtfile.write('Financial Analysis')
-    txtfile.write('---------------------------')
-    txtfile.write(f'Total Months: {num_months}')
-    txtfile.write(f'Total: ${total_profits}')
-    txtfile.write(f'Average Change: ${round(avgprofitchange,2)}')
-    txtfile.write(f'Greatest Increase in Profits: {date_change[index_greatest_increase]} (${greatest_increase_profit})')
+    txtfile.write('Financial Analysis\n')
+    txtfile.write('---------------------------\n')
+    txtfile.write(f'Total Months: {num_months}\n')
+    txtfile.write(f'Total: ${total_profits}\n')
+    txtfile.write(f'Average Change: ${round(avgprofitchange,2)}\n')
+    txtfile.write(f'Greatest Increase in Profits: {date_change[index_greatest_increase]} (${greatest_increase_profit})\n')
     txtfile.write(f'Greatest Decrease in Profits: {date_change[index_greatest_decrease]} (${greatest_decrease_profit})')
     
