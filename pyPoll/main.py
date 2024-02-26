@@ -63,15 +63,15 @@ print('---------------------------------------')
 #used day 2 activity 10 and activtiy 12 to help write the code to write the files into a new txt file
 output_path = os.path.join('analysis','Poll_Results_analysis.txt')
 with open(output_path,'w') as txtfile:
-    txtfile.write('Election Results')
-    txtfile.write('---------------------------------------')
-    txtfile.write(f'total votes: {num_voters}')
-    txtfile.write('---------------------------------------')        
+    txtfile.write('Election Results\n')
+    txtfile.write('---------------------------------------\n')
+    txtfile.write(f'total votes: {num_voters}\n')
+    txtfile.write('---------------------------------------\n')        
     for i in range(len(unique_candidate_list)):
         percent_of_votes = round((unique_candidate_list_votes[i]/num_voters)*100,3)
-        txtfile.write(f'{unique_candidate_list[i]}: {percent_of_votes}% ({unique_candidate_list_votes[i]})')
-    txtfile.write('---------------------------------------')
-    txtfile.write(f'Winner: {winning_candidate}')
+        txtfile.write(f'{unique_candidate_list[i]}: {percent_of_votes}% ({unique_candidate_list_votes[i]})\n')
+    txtfile.write('---------------------------------------\n')
+    txtfile.write(f'Winner: {winning_candidate}\n')
     txtfile.write('---------------------------------------')
         
 
