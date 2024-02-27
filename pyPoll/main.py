@@ -32,8 +32,6 @@ with open(election_csv,'r') as csvfile:
         else:
             candidate_counter_dict[candidate_name] = 1
         #convert the dictionary into two list with unique candiates and there amount of votes
-        #i used https://www.tutorialspoint.com/How-to-convert-Python-Dictionary-to-a-list 
-        #to help convert the open dictinary to two seperate list based on whether they were keys or values
         #having these values and strings in separate list will be useful for finding the winner and percentage of votes for each candidate
         #By doing this it makes it very simple to update the data if another candidate is added or when another election is held 
 
@@ -61,7 +59,6 @@ print(f'Winner: {winning_candidate}')
 print('---------------------------------------')   
 
 #write the results into a separate txt file 
-#used day 2 activity 10 and activtiy 12 to help write the code to write the files into a new txt file
 output_path = os.path.join('analysis','Poll_Results_analysis.txt')
 with open(output_path,'w') as txtfile:
     txtfile.write('Election Results\n')
