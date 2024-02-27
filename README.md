@@ -1,6 +1,6 @@
-# python-challenge1
+![revenue-per-lead](https://github.com/grantgorham26/python-challenge/assets/154031840/1e07b9a7-2d53-48e9-a041-d53638a193e3)# python-challenge1
  
-Pybank:![Uploading revenue-per-lead.png…]()
+Pybank:
 
 
 In the pybank challenge the goal of this project was to write a python script that would analyze financial records. The financial records include the profit/losses for specific months of a year. The scrip that was created obtained the total amount of months of financial records, the net profit/losses, the average change in profit/losses fro each month, the month with the  greatest increase in profits and the month with the greatest loss in profit.
