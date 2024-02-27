@@ -1,4 +1,4 @@
-![revenue-per-lead](https://github.com/grantgorham26/python-challenge/assets/154031840/1e07b9a7-2d53-48e9-a041-d53638a193e3)# python-challenge1
+# python-challenge1
  
 Pybank:
 
