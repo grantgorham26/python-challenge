@@ -30,14 +30,16 @@ with open(election_csv,'r') as csvfile:
         #to help convert the open dictinary to two seperate list based on whether they were keys or values
         #having these values and strings in separate list will be useful for finding the winner and percentage of votes for each candidate
         #By doing this it makes it very simple to update the data if another candidate is added or when another election is held 
-        unique_candidate_list = list(candidate_counter_dict.keys())
-        unique_candidate_list_votes = list(candidate_counter_dict.values())
+        
 
         #used kevins extra examples to create a counter that puts each name into a dictionary
         if candidate_name in candidate_counter_dict:
             candidate_counter_dict[candidate_name] = candidate_counter_dict[candidate_name] + 1
         else:
             candidate_counter_dict[candidate_name] = 1
+
+        unique_candidate_list = list(candidate_counter_dict.keys())
+        unique_candidate_list_votes = list(candidate_counter_dict.values())
 #obtain the max amount of votes from list of amount of votes from the counter dictionary            
 highest_vote_count = max(unique_candidate_list_votes)
 #obtain index of the candidate with highest votes
